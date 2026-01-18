@@ -1,7 +1,7 @@
 # <REPO NAME>
 
-Minimal, deterministic guardrail for governance-first workflows.
+Deterministic WFSL Tier-1 component.
 
-This repository exists to produce machine-verifiable outcomes in CI. It is intended to prevent drift by failing builds when declared rules are violated.
+This repository provides a narrowly scoped, governance-first capability designed to produce machine-verifiable outcomes and prevent operational drift.
 
 Verified by WFSL software and CI.
