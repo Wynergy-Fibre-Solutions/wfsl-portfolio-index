@@ -1,66 +1,73 @@
-\# WFSL Compatibility Matrix
+# WFSL Compatibility Matrix
 
+This matrix describes which WFSL components are designed to compose together,
+which operate standalone, and which are experimental.
 
-
-This document defines which WFSL components compose and what signals they exchange.
-
-
-
-\## Signals
-
-
-
-\- SHELL\_OK  
-
-&nbsp; Execution environment verified safe.
-
-
-
-\- EVIDENCE\_EMITTED  
-
-&nbsp; Deterministic evidence artefact produced.
-
-
-
-\- ADMISSION\_OK  
-
-&nbsp; Declared surface admitted, undeclared surface blocked.
-
-
+Compatibility is defined by **enforced integration**, not conceptual alignment.
 
 ---
 
+## Legend
 
-
-\## Component Compatibility
-
-
-
-| Component              | Requires        | Emits              | Composes With                    |
-
-|-----------------------|-----------------|--------------------|----------------------------------|
-
-| wfsl-shell-guard      | none            | SHELL\_OK           | All executable WFSL components   |
-
-| wfsl-evidence-guard   | SHELL\_OK        | EVIDENCE\_EMITTED   | Shell Guard, Governance Chain    |
-
-| wfsl-admission-guard  | SHELL\_OK        | ADMISSION\_OK       | Shell Guard, Evidence Guard      |
-
-| wfsl-governance-chain | all above       | Combined proof     | All core components              |
-
-
+- **Authoritative**: Enforces or verifies outcomes used by other components
+- **Composable**: Designed to be executed as part of a chain
+- **Standalone**: Operates independently
+- **Experimental**: Not part of the canonical enforcement chain
 
 ---
 
+## Canonical Enforcement Chain (Tier 1)
 
+| Component               | Role            | Depends On            | Enforced By           |
+|------------------------|-----------------|-----------------------|-----------------------|
+| wfsl-shell-guard       | Authoritative   | None                  | CI / Direct invocation|
+| wfsl-evidence-guard    | Authoritative   | wfsl-shell-guard      | CI                    |
+| wfsl-admission-guard   | Authoritative   | wfsl-shell-guard      | CI                    |
+| wfsl-governance-chain  | Orchestrator    | All above             | CI                    |
 
-\## Notes
+---
 
+## Trust and Authority Spine
 
+| Component               | Role            | Composes With                     | Notes                           |
+|------------------------|-----------------|-----------------------------------|---------------------------------|
+| wfsl-trust-spec        | Authoritative   | licence, evidence, admission      | Defines trust semantics          |
+| wfsl-licence-core      | Authoritative   | evidence, verification            | Authority over outputs           |
+| WFSL-Licence-Engine    | Authoritative   | licence-core, verification        | Deterministic licence engine     |
 
-Composition is enforced in CI using multi-repository checkout.
+---
 
-No component is duplicated or embedded.
+## Supporting / Active Systems (Tier 2)
 
+| Component                   | Role        | Compatibility                      |
+|----------------------------|-------------|------------------------------------|
+| wfsl-route-sentinel        | Composable  | admission, shell                   |
+| wfsl-org-profile-guard    | Standalone  | evidence                            |
+| wfsl-cloudflare-guard     | Composable  | shell, evidence                    |
+| wfsl-repo-guard           | Standalone  | none                               |
+| wfsl-control-plane        | Standalone  | governance tooling                 |
+| wfsl-cross-verify         | Standalone  | evidence, licence                  |
+| wfsl-guard-consumer-proof | Standalone  | evidence                           |
+| wfsl-web                  | Interface   | none                               |
 
+---
 
+## Experimental / Parallel Lines (Tier 3)
+
+| Component                     | Status        |
+|------------------------------|---------------|
+| triggerguard-*               | Experimental |
+| wyneos-core / WyneOS         | Experimental |
+| sentinel-*                   | Experimental |
+| aletheseal-infrastructure   | Experimental |
+| commercial-wfsl-*            | Experimental |
+
+---
+
+## Notes
+
+- Only Tier 1 components form the **canonical proof chain**.
+- Tier 2 components may be elevated if enforcement is added.
+- Tier 3 components make no verification claims.
+
+Compatibility claims are updated only when enforcement exists.
