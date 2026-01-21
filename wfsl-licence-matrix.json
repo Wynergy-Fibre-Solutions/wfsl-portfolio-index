@@ -1,0 +1,26 @@
+{
+  "authority": "wfsl-portfolio-index",
+  "version": "1.0.0",
+  "licence_classes": {
+    "open_core": {
+      "commercial_use": false,
+      "redistribution": false,
+      "audit": true
+    },
+    "community_cic": {
+      "commercial_use": false,
+      "internal_use": true
+    },
+    "demo_evaluation": {
+      "commercial_use": false,
+      "time_limited": true
+    },
+    "commercial": {
+      "commercial_use": true,
+      "admission_required": true
+    },
+    "internal": {
+      "distributable": false
+    }
+  }
+}
