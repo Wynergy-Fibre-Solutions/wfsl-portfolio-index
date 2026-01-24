@@ -1,0 +1,16 @@
+{
+  "tool": "wfsl-portfolio-index",
+  "bundleType": "proofgate",
+  "version": "0.1.0",
+  "emittedAt": "2026-01-24T02:14:48.1724211Z",
+  "manifest": "proofgate.manifest.json",
+  "artefacts": {
+    "snapshot": "wfsl.portfolio.snapshot.json",
+    "hash": "wfsl.portfolio.snapshot.sha256",
+    "verdict": "wfsl.portfolio.verdict.json"
+  },
+  "determinism": {
+    "hash": "sha256",
+    "scope": "portfolio-snapshot"
+  }
+}

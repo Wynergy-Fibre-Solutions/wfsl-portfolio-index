@@ -1,0 +1,8 @@
+{
+  "tool": "wfsl-portfolio-index",
+  "guardType": "portfolio",
+  "verdict": "PASS",
+  "verifiedAt": "2026-01-24T02:14:06.7747192Z",
+  "artefact": "wfsl.portfolio.snapshot.json",
+  "hash": "A0AB095AEF8E16706402B733C460B952397B827DA53D4887A1557BD74BCA496B"
+}

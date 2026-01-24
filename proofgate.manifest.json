@@ -1,0 +1,19 @@
+{
+  "name": "wfsl-portfolio-index",
+  "version": "0.1.0",
+  "description": "WFSL Portfolio Index. Emits deterministic portfolio snapshots for ProofGate ingestion and control-plane convergence.",
+  "owner": "Wynergy Fibre Solutions Ltd",
+  "scope": "portfolio",
+  "tier": "opencore",
+  "entrypoint": null,
+  "artefacts": [
+    "wfsl.portfolio.snapshot.json",
+    "wfsl.portfolio.snapshot.sha256",
+    "wfsl.portfolio.verdict.json"
+  ],
+  "determinism": {
+    "inputs": "local-repo-directory-state",
+    "outputs": "deterministic-json",
+    "hash": "sha256"
+  }
+}
