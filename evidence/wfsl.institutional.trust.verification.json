@@ -1,0 +1,51 @@
+{
+  "tool": "wfsl-institutional-trust-track",
+  "artefactType": "verification",
+  "version": "1.0",
+  "status": "ACTIVE",
+  "generatedAt": "2026-01-24T00:00:00.000Z",
+  "scope": "institutional-trust",
+  "basis": {
+    "charter": "WFSL INSTITUTIONAL TRUST TRACK — CHARTER v1.0",
+    "authority": "WFSL Control Plane",
+    "binding": "non-revocable without supermajority"
+  },
+  "trustInvariants": [
+    "non-repudiation",
+    "deterministic-evidence",
+    "continuity-over-time",
+    "neutral-verifiability",
+    "asymmetry-resistance"
+  ],
+  "verificationModel": {
+    "method": "artefact-first",
+    "proofSystem": "ProofGate",
+    "evidenceRequirements": [
+      "hash-sealed artefacts",
+      "reproducible snapshots",
+      "independent verification"
+    ],
+    "mediationRequired": false
+  },
+  "institutionalPosture": {
+    "role": "execution-system",
+    "presentation": "verification-surface",
+    "stance": "governance-peer"
+  },
+  "regulatoryCompatibility": {
+    "manualReconciliation": false,
+    "jurisdictionSpecificOverrides": false,
+    "complianceDerivedFrom": "execution-artefacts"
+  },
+  "successCriteria": [
+    "artefacts accepted without negotiation",
+    "audits complete without clarification",
+    "outputs survive hostile review",
+    "trust persists independently of individuals"
+  ],
+  "verdict": {
+    "status": "PASS",
+    "confidence": "execution-derived",
+    "relianceModel": "permanent"
+  }
+}
