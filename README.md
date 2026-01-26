@@ -1,41 +1,20 @@
-# WFSL Portfolio Index
+## Commercially Available Software
 
-## Role
-Authoritative aggregation layer for WFSL governance, trust, execution capability, and portfolio state.
+The following WFSL components are commercially licensable and available for organisational use under the WFSL Gold licence.
 
-This repository does not draft. It indexes, binds, and signals canonised artefacts.
+- **WFSL ProofGate CLI**  
+  Operator-facing coordination interface for evidence, admission, and verification workflows.
 
----
+- **WFSL Evidence Guard**  
+  Deterministic, cryptographically verifiable evidence generation component.
 
-## Governance Authority
-- Canon source: wfsl-core-governance
-- Reference map: WFSL-PORTFOLIO-REFERENCES.md
+- **WFSL Repo Guard**  
+  Governance inspection and repository state evaluation tool.
 
----
+- **WFSL Shell Guard**  
+  Controlled execution boundary enforcing deterministic and auditable command execution.
 
-## Portfolio Composition
-- Institutional Trust Track (charter, binding, evidence)
-- Field Execution Layer
-- Sovereign Device and OS Track
-- Consolidated Portfolio Verdict (machine-readable)
+- **WFSL Verify**  
+  Independent verification tooling for WFSL evidence and trust outputs.
 
----
-
-## Investor Interface
-- Entry index: WFSL-INVESTOR-INDEX.md
-- Integrity lock: WFSL-PORTFOLIO-INTEGRITY-NOTE.md
-
----
-
-## Change Rules
-- Versioned artefacts only
-- No duplication of source content
-- Deterministic evidence permitted
-- Zero drift tolerance
-
----
-
-## Status
-- Authority: Active
-- Integrity: Locked
-- Use: Governance, diligence, signalling
+Commercial use requires a valid WFSL licence. See `commercial-wfsl-offerings/HOW-TO-BUY.md`.
