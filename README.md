@@ -18,3 +18,22 @@ WFSL Verify
 Independent verification tooling for WFSL evidence and trust outputs.
 
 Commercial use requires a valid WFSL licence. See commercial-wfsl-offerings/HOW-TO-BUY.md.
+
+---
+
+## Platform Structure
+
+WFSL software is organised as a convergent platform with defined departments and bundles.
+
+Authoritative references:
+
+- Platform Index:  
+  wfsl-core-governance/WFSL-PLATFORM-INDEX.md
+
+- Department Index:  
+  wfsl-core-governance/WFSL-DEPARTMENT-INDEX.md
+
+- Platform Bundles:  
+  wfsl-core-governance/WFSL-PLATFORM-BUNDLES.md
+
+These documents define how WFSL components compose, govern, and licence together.
